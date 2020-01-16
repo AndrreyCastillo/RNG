@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- ActionBar Styles -->
+    <style name="WheelActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorWheel</item>
+        <item name="colorPrimaryDark">@color/colorWheel</item>
+    </style>
+
+    <style name="DiceActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorDice</item>
+        <item name="colorPrimaryDark">@color/colorDice</item>
+    </style>
+
+    <style name="RandomNumberActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorRandomNumber</item>
+        <item name="colorPrimaryDark">@color/colorRandomNumber</item>
+    </style>
+
+    <style name="RandomPasswordActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorRandomPassword</item>
+        <item name="colorPrimaryDark">@color/colorRandomPassword</item>
+    </style>
+
+</resources>

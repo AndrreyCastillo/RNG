@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C0C0C0</color>
+    <color name="colorPrimaryDark">#C0C0C0 </color>
+    <color name="colorAccent">#0072EE</color>
+    <color name="colorWheel">#af7ac5</color>
+    <color name="colorDice"> #5499c7</color>
+    <color name="colorRandomNumber"> #48c9b0</color>
+    <color name="colorRandomPassword"> #f4d03f</color>
+</resources>

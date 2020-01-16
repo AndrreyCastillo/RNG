@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RNG</string>
+    <string name="title_activity_wheel_of_rng">Wheel Of RNG</string>
+    <string name="wheel_of_rng">Wheel of RNG</string>
+    <string name="dice">Dice</string>
+    <string name="random_number">Random Number</string>
+    <string name="random_password">Random Password</string>
+</resources>
