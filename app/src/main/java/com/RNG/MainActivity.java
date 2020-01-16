@@ -10,6 +10,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    // just want to run the button animation on initial startup, not every startup
+    private static boolean firstAnimationComplete;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        if (firstAnimationComplete != false) return;
+
+        firstAnimationComplete = true;
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
