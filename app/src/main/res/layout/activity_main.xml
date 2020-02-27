@@ -14,8 +14,8 @@
         android:fontFamily="casual"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:backgroundTint="@color/colorWheel"
-        android:background="@drawable/main_activity_buttons"
+
+        android:background="@drawable/wheel_of_rng_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="50dp"
@@ -31,8 +31,8 @@
         android:fontFamily="casual"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:backgroundTint="@color/colorDice"
-        android:background="@drawable/main_activity_buttons"
+
+        android:background="@drawable/dice_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.0"
@@ -48,8 +48,8 @@
         android:fontFamily="casual"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:backgroundTint="@color/colorRandomNumber"
-        android:background="@drawable/main_activity_buttons"
+
+        android:background="@drawable/random_number_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.0"
@@ -65,8 +65,8 @@
         android:fontFamily="casual"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:backgroundTint="@color/colorRandomPassword"
-        android:background="@drawable/main_activity_buttons"
+
+        android:background="@drawable/random_password_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.0"
