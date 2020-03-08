@@ -6,7 +6,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class DiceActivity extends AppCompatActivity {
-    private TextView textView;
+    private TextView dice_number;
     private SeekBar seekBar;
 
     @Override
@@ -14,13 +14,15 @@ public class DiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice);
 
-        textView = (TextView) findViewById(R.id.dice_number);
+        dice_number = (TextView) findViewById(R.id.dice_number);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
+
+        dice_number.setText(Integer.toString(seekBar.getProgress() + 1));
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                textView.setText(" " + progress + " ");
+                dice_number.setText(" " + (progress + 1) + " ");
             }
 
             @Override
