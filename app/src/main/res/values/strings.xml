@@ -8,4 +8,5 @@
     <string name="about">About</string>
     <string name="dice_select">Select number of dice:</string>
     <string name="dice_number">#</string>
+    <string name="ROLL">ROLL</string>
 </resources>

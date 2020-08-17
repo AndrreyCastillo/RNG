@@ -14,8 +14,8 @@ public class DiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice);
 
-        dice_number = (TextView) findViewById(R.id.dice_number);
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        dice_number = findViewById(R.id.dice_number);
+        seekBar = findViewById(R.id.seekBar);
 
         dice_number.setText(Integer.toString(seekBar.getProgress() + 1));
 
