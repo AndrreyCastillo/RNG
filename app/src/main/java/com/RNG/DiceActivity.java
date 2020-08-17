@@ -52,7 +52,7 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         Spinner spinner = findViewById(R.id.dice_type_spinner);
 
         spinner.setOnItemSelectedListener(this);
-
+        
         List<String> dice_types = new ArrayList<>();
         dice_types.add(getString(R.string.dice_type_d4));
         dice_types.add(getString(R.string.dice_type_d6));
