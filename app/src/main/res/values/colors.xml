@@ -8,11 +8,11 @@
     <color name="colorWheel">#af7ac5</color>
     <color name="colorDice"> #5499c7</color>
     <color name="colorRandomNumber"> #48c9b0</color>
-    <color name="colorRandomPassword"> #f4d03f</color>
+    <color name="colorSpinTheBottle"> #f4d03f</color>
 
     <!-- Darker Button Colors -->
     <color name="colorWheelDark">#9a6aae</color>
     <color name="colorDiceDark"> #4885ad</color>
     <color name="colorRandomNumberDark"> #3aa490</color>
-    <color name="colorRandomPasswordDark"> #ceb036</color>
+    <color name="colorSpinTheBottleDark"> #ceb036</color>
 </resources>

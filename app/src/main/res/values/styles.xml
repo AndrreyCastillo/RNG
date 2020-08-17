@@ -25,8 +25,8 @@
     </style>
 
     <style name="RandomPasswordTheme" parent="@style/AppTheme">
-        <item name="colorPrimary">@color/colorRandomPassword</item>
-        <item name="colorPrimaryDark">@color/colorRandomPassword</item>
+        <item name="colorPrimary">@color/colorSpinTheBottle</item>
+        <item name="colorPrimaryDark">@color/colorSpinTheBottle</item>
     </style>
 
 </resources>

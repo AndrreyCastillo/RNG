@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomPassword_OnClick(View view) {
-        Intent intent = new Intent(this, RandomPasswordActivity.class);
+        Intent intent = new Intent(this, SpinTheBottleActivity.class);
         startActivity(intent);
     }
 }
