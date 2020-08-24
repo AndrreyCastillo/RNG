@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,6 +21,7 @@ import com.RNG.Adapters.DiceAdapter;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 enum DICE_TYPE {
     D4 {
@@ -61,20 +61,11 @@ enum DICE_TYPE {
 public class DiceActivity extends AppCompatActivity implements OnItemSelectedListener {
 
     private TextView diceNumber;
+    private TextView sumNumber;
+    private TextView sumText;
     private SeekBar seekBar;
     private Spinner spinner;
     private Vibrator vibrator;
-
-    ImageView resultOne;
-    ImageView resultTwo;
-    ImageView resultThree;
-    ImageView resultFour;
-    ImageView resultFive;
-    ImageView resultSix;
-    ImageView resultSeven;
-    ImageView resultEight;
-    ImageView resultNine;
-    ImageView resultTen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +73,8 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         setContentView(R.layout.activity_dice);
 
         diceNumber = findViewById(R.id.dice_number);
+        sumNumber = findViewById(R.id.dice_sum_number);
+        sumText = findViewById(R.id.dice_sum_text);
         seekBar = findViewById(R.id.seekBar);
         spinner = findViewById(R.id.dice_type_spinner);
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -156,12 +149,16 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         // GET THE DICE ROLLS
         int[] dice = rollDice(numberOfDice, diceType);
 
+        sumNumber.setText(IntStream.of(dice).sum() + "");
+        sumText.setText(R.string.sum);
+
         setDiceImages(dice, diceType);
     }
     private void vibrate(int vibrationTimeInMilli, int vibrationEffect) {
-        if (Build.VERSION.SDK_INT >= 26) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(vibrationTimeInMilli,vibrationEffect));
-        } else {
+        }
+        else {
             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(vibrationTimeInMilli);
         }
     }
