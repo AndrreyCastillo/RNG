@@ -6,7 +6,7 @@
     <string name="random_number">Random Number</string>
     <string name="spin_the_bottle">Spin The Bottle</string>
     <string name="about">About</string>
-    <string name="dice_select">Select number of dice:</string>
+    <string name="dice_select">Number of dice:</string>
     <string name="dice_number">#</string>
     <string name="ROLL">ROLL</string>
     <string name="dice_type">Dice Type:</string>
