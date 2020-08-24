@@ -93,7 +93,7 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                diceNumber.setText(" " + (progress + 1) + " "); // update dice number from seekbar
+                diceNumber.setText((progress + 1) + ""); // update dice number from seekbar
 
                 vibrate(25, VibrationEffect.EFFECT_TICK);
             }
@@ -122,7 +122,7 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         dice_types.add(DICE_TYPE.D20);
 
         // Creating adapter for spinner
-        ArrayAdapter<DICE_TYPE> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, dice_types);
+        ArrayAdapter<DICE_TYPE> dataAdapter = new ArrayAdapter<>(this, R.layout.dice_spinner_item, dice_types);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -158,13 +158,6 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
 
         setDiceImages(dice, diceType);
     }
-
-    private void setGridAdapter(int[] dice) {
-        GridView diceGrid = (GridView) findViewById(R.id.diceGrid); // init GridView
-        DiceAdapter customAdapter = new DiceAdapter(getApplicationContext(), dice);
-        diceGrid.setAdapter(customAdapter);
-    }
-
     private void vibrate(int vibrationTimeInMilli, int vibrationEffect) {
         if (Build.VERSION.SDK_INT >= 26) {
             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(vibrationTimeInMilli,vibrationEffect));
@@ -183,6 +176,12 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         }
 
         return dice;
+    }
+
+    private void setGridAdapter(int[] dice) {
+        GridView diceGrid = (GridView) findViewById(R.id.diceGrid); // init GridView
+        DiceAdapter customAdapter = new DiceAdapter(getApplicationContext(), dice);
+        diceGrid.setAdapter(customAdapter);
     }
 
     private void setDiceImages(int[] dice, DICE_TYPE diceType) {
