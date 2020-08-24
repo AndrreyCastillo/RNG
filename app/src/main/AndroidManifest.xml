@@ -19,7 +19,7 @@
         <activity android:name=".WheelOfRNGActivity" android:theme="@style/WheelTheme" android:label="@string/wheel_of_rng" />
         <activity android:name=".DiceActivity" android:theme="@style/DiceTheme" android:label="@string/dice"/>
         <activity android:name=".RandomNumberActivity" android:theme="@style/RandomTheme" android:label="@string/random_number"/>
-        <activity android:name=".SpinTheBottleActivity" android:theme="@style/RandomPasswordTheme" android:label="@string/spin_the_bottle"></activity>
+        <activity android:name=".SpinTheBottleActivity" android:theme="@style/SpinTheBottleTheme" android:label="@string/spin_the_bottle"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.VIBRATE"/>
 </manifest>
