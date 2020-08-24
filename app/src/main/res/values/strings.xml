@@ -10,10 +10,5 @@
     <string name="dice_number">#</string>
     <string name="ROLL">ROLL</string>
     <string name="dice_type">Dice Type:</string>
-    <string name="dice_type_d4">D4</string>
-    <string name="dice_type_d6">D6</string>
-    <string name="dice_type_d8">D8</string>
-    <string name="dice_type_d10">D10</string>
-    <string name="dice_type_d12">D12</string>
-    <string name="dice_type_d20">D20</string>
+    <string name="sum">Sum:</string>
 </resources>
