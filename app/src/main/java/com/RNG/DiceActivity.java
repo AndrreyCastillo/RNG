@@ -2,6 +2,7 @@ package com.RNG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -65,7 +66,7 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
     private TextView sumText;
     private SeekBar seekBar;
     private Spinner spinner;
-    private Vibrator vibrator;
+    private VibrationHandler vibrationHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +78,7 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         sumText = findViewById(R.id.dice_sum_text);
         seekBar = findViewById(R.id.seekBar);
         spinner = findViewById(R.id.dice_type_spinner);
-        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibrationHandler = new VibrationHandler();
 
         loadSpinnerList();
 
@@ -88,7 +89,7 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 diceNumber.setText((progress + 1) + ""); // update dice number from seekbar
 
-                vibrate(25, VibrationEffect.EFFECT_TICK);
+                vibrationHandler.vibrate(25, VibrationEffect.EFFECT_TICK, DiceActivity.this);
             }
 
             @Override
@@ -138,7 +139,7 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
     }
 
     public void roll_OnClick(View view) {
-        vibrate(100, VibrationEffect.EFFECT_HEAVY_CLICK);
+        vibrationHandler.vibrate(100, VibrationEffect.EFFECT_HEAVY_CLICK, this);
 
         // GET NUMBER OF DICES TO ROLL
         int numberOfDice = seekBar.getProgress() + 1;
@@ -153,14 +154,6 @@ public class DiceActivity extends AppCompatActivity implements OnItemSelectedLis
         sumText.setText(R.string.sum);
 
         setDiceImages(dice, diceType);
-    }
-    private void vibrate(int vibrationTimeInMilli, int vibrationEffect) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(vibrationTimeInMilli,vibrationEffect));
-        }
-        else {
-            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(vibrationTimeInMilli);
-        }
     }
 
     private int[] rollDice(int numberOfDice, DICE_TYPE diceType) {

@@ -1,9 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".RandomNumberActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="@string/from"
+        android:layout_above="@+id/linearLayoutFirstField"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFirstField"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/linearLayoutSecondField"
+        android:layout_marginBottom="180dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/firstNumber"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:minWidth="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:maxLength="18"
+            android:background="@drawable/random_number_rounded_cell"
+            android:importantForAutofill="no"
+            android:textColor="@color/offWhite"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:text="@string/to"
+        android:layout_above="@+id/linearLayoutSecondField"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSecondField"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/linearLayoutRollButton"
+        android:layout_marginBottom="180dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/secondNumber"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:minWidth="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:maxLength="18"
+            android:background="@drawable/random_number_rounded_cell"
+            android:importantForAutofill="no"
+            android:textColor="@color/offWhite"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRollButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/rollButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:onClick="rng_OnClick"
+            android:text="@string/rng_it" />
+
+    </LinearLayout>
+</RelativeLayout>

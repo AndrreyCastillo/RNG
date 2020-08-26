@@ -11,4 +11,7 @@
     <string name="ROLL">ROLL</string>
     <string name="dice_type">Dice Type:</string>
     <string name="sum">Sum:</string>
+    <string name="rng_it">RNG it</string>
+    <string name="to">To:</string>
+    <string name="from">From:</string>
 </resources>
