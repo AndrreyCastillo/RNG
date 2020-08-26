@@ -15,4 +15,6 @@
     <color name="colorDiceDark"> #4885ad</color>
     <color name="colorRandomNumberDark"> #3aa490</color>
     <color name="colorSpinTheBottleDark"> #ceb036</color>
+
+    <color name="offWhite">#fafafa</color>
 </resources>
