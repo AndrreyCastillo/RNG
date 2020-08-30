@@ -14,4 +14,5 @@
     <string name="rng_it">RNG it</string>
     <string name="to">To:</string>
     <string name="from">From:</string>
+    <string name="tap_to_spin">Tap the bottle to spin!</string>
 </resources>
