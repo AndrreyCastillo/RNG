@@ -14,7 +14,6 @@ import java.security.SecureRandom;
 public class SpinTheBottleActivity extends AppCompatActivity {
 
     private ImageView bottle;
-    private View main;
 
     public static final SecureRandom RANDOM = new SecureRandom();
     private int lastAngle = -1;
@@ -27,7 +26,6 @@ public class SpinTheBottleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spin_the_bottle);
 
-        main = findViewById(R.id.root);
         bottle = (ImageView) findViewById(R.id.bottle);
 
         Toast.makeText(this, R.string.tap_to_spin, Toast.LENGTH_SHORT).show();
