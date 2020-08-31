@@ -41,21 +41,21 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
 
-        Button wheelButton = findViewById(R.id.wheel);
+        Button wheelButton = findViewById(R.id.wheel_of_rng_button);
         wheelButton.setX(screenWidth);
         wheelButton.animate().x(30);
 
-        Button diceButton = findViewById(R.id.dice);
+        Button diceButton = findViewById(R.id.dice_button);
         diceButton.setX(-screenWidth - 20);
         diceButton.animate().x(30);
 
-        Button randomNumberButton = findViewById(R.id.random_number);
+        Button randomNumberButton = findViewById(R.id.random_number_button);
         randomNumberButton.setX(screenWidth);
         randomNumberButton.animate().x(30);
 
-        Button randomPasswordButton = findViewById(R.id.random_password);
-        randomPasswordButton.setX(-screenWidth - 20);
-        randomPasswordButton.animate().x(30);
+        Button spinTheBottleButton = findViewById(R.id.spin_the_bottle_button);
+        spinTheBottleButton.setX(-screenWidth - 20);
+        spinTheBottleButton.animate().x(30);
     }
 
     public void wheelOfRNG_OnClick(View view) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void randomPassword_OnClick(View view) {
+    public void spinTheBottle_OnClick(View view) {
         Intent intent = new Intent(this, SpinTheBottleActivity.class);
         startActivity(intent);
     }
