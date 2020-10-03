@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        if (firstAnimationComplete != false) return;
+        if (firstAnimationComplete) return;
 
         firstAnimationComplete = true;
 

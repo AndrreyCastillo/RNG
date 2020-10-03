@@ -15,4 +15,6 @@
     <string name="to">To:</string>
     <string name="from">From:</string>
     <string name="tap_to_spin">Tap the bottle to spin!</string>
+    <string name="add_item_here">Add item here!</string>
+    <string name="add">ADD</string>
 </resources>
