@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.EditText;
 
@@ -24,6 +26,13 @@ public class WheelOfRNGActivity extends AppCompatActivity {
         setContentView(R.layout.activity_wheel_of_rng);
 
         mEditText = findViewById(R.id.editText_list_wheel);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.wheel_of_rng_items_menu, menu);
+        return true;
     }
 
     public void add_OnClick(View view) {
