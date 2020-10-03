@@ -17,7 +17,7 @@
     <string name="tap_to_spin">Tap the bottle to spin!</string>
     <string name="add_item_here">Add item here!</string>
     <string name="add">ADD</string>
-    <string name="import_list_item_menu"><![CDATA[import list></item> </menu>]]></string>
-    <string name="export_list">export list</string>
-    <string name="clear_list">clear list</string>
+    <string name="import_list_item_menu">Import List</string>
+    <string name="export_list">Export List</string>
+    <string name="clear_list">Clear List</string>
 </resources>
