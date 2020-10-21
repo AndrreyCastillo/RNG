@@ -10,20 +10,39 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/add_button"
+        android:layout_above="@+id/wheel_of_rng_button_holder"
         android:scrollbars="vertical"
         android:background="@drawable/wheel_of_rng_list_border"/>
 
-    <Button
-        android:id="@+id/add_button"
-        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+    <LinearLayout
+        android:id="@+id/wheel_of_rng_button_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add"
-        android:layout_above="@+id/editText_list_wheel"
-        android:layout_marginVertical="20dp"
-        android:height="60dp"
-        android:onClick="add_OnClick"/>
+        android:orientation="horizontal"
+        android:layout_above="@id/editText_list_wheel"
+        android:layout_marginVertical="10dp">
+
+        <Button
+            android:id="@+id/wheel_of_rng_spin_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:height="60dp"
+            android:onClick="spinTheWheel_OnClick"
+            android:text="@string/spin"
+            android:layout_weight=".5">
+        </Button>
+
+        <Button
+            android:id="@+id/wheel_of_rng_add_button"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:height="60dp"
+            android:onClick="add_OnClick"
+            android:layout_width="0dp"
+            android:layout_weight=".5"/>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/editText_list_wheel"
