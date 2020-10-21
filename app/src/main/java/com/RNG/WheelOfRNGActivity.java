@@ -35,6 +35,19 @@ public class WheelOfRNGActivity extends AppCompatActivity {
         return true;
     }
 
+    public void refreshRecyclerView() {
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        WheelRecyclerViewAdapter adapter = new WheelRecyclerViewAdapter(this, listOfItems);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        recyclerView.scrollToPosition(listOfItems.size() - 1);
+    }
+
+    public void spinTheWheel_OnClick(View view) {
+    }
+
     public void add_OnClick(View view) {
         String text = mEditText.getText().toString();
 
@@ -50,15 +63,5 @@ public class WheelOfRNGActivity extends AppCompatActivity {
         refreshRecyclerView();
 
         mEditText.setText("");
-    }
-
-    public void refreshRecyclerView() {
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        WheelRecyclerViewAdapter adapter = new WheelRecyclerViewAdapter(this, listOfItems);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        recyclerView.scrollToPosition(listOfItems.size() - 1);
     }
 }

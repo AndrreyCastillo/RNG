@@ -20,4 +20,5 @@
     <string name="import_list_item_menu">Import List</string>
     <string name="export_list">Export List</string>
     <string name="clear_list">Clear List</string>
+    <string name="spin">SPIN</string>
 </resources>
